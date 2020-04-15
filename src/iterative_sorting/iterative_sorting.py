@@ -26,11 +26,11 @@ def bubble_sort( arr ):
     swap = True
     while swap is True:
         swap = False
-        for i in range(len(arr) - 1):
-            for j in range(i + 1, len(arr)):
-                if arr[i] > arr[j]:
-                    arr[i], arr[j] = arr[j], arr[i]
-                    swap = True
+        for i in range(1,len(arr)):
+            if arr[i] < arr[i -1]:
+                arr[i], arr[i - 1] = arr[i-1], arr[i]
+                swap = True
+
     return arr
 
 
